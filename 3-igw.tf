@@ -1,9 +1,9 @@
-resource "aws_internet_gateway" "relearn_igw" {
+resource "aws_internet_gateway" "ec2_autoscalegroup_igw" {
 
-vpc_id = aws_vpc.relearn_vpc.id
+vpc_id = aws_vpc.ec2_autoscalegroup_vpc.id
 
-    tags = {
-        Name = "relearn_terraform"
-    }
+  tags = {
+    Name = var.project_tag
+  }
   
 }
